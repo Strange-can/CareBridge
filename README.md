@@ -1,4 +1,4 @@
-# 💰 CareBridge — Donation Platform
+# CareBridge 💚
 
 > *Healthcare for everyone — online, offline, or in need*
 
@@ -6,71 +6,93 @@
 
 ---
 
-## 🎯 What This Repo Is
+## 🎯 What Is CareBridge?
 
-The **donation platform** for CareBridge — a full-stack web app connecting **patients in need**, **verified hospitals**, and **donors worldwide**.
+A **donation platform** connecting patients in need, verified hospitals, and donors worldwide.
 
-Part of a two-part system:
-- 📡 **LoRaButton** — physical emergency button (no internet required)
-- 💰 **This repo** — donation platform (handles requests, verification, and payments)
+**How it works:**
 
----
+1. Hospital treats patient for **free** 🆓
+2. Hospital uploads bill (medicine names + cost + hospital stamp) — **no patient photos or names**
+3. Donation request goes public 🌐
+4. Donor pays hospital directly 💲
+5. Patient gets healthy ✅
 
-## ✨ Why This Stack?
-
-We chose **lightweight, no-build, production-ready** tools that work on **low-end devices** in low-income regions:
-
-| Layer | Technology | Why |
-| :--- | :--- | :--- |
-| **Frontend** | HTMX + Pico.css + helpers.js | No build step. Ships as HTML. Fast on any device. |
-| **Backend** | Python + Flask + SQLite | Simple, lightweight, easy to iterate. |
-| **Deployment** | Anywhere (Render, Fly.io, PythonAnywhere, VPS) | No special requirements. |
-
-> 🧠 **No React. No Webpack. No Node_modules hell.** Just HTML that feels dynamic.
+**No money? No problem. No privacy violation? Guaranteed.**
 
 ---
 
-## 🚀 How It Works
+## 📚 Documentation
 
-### Flow Overview
+For **detailed scenarios** (patient direct, hospital flow, donor verification), see:  
+👉 [docs/How-It-Works.md](docs/How-It-Works.md)
 
-**Patient → Hospital → Donation Request → Platform → Donor → Payment → Thank You**
+---
 
-### Detailed Steps (For Hospitals)
+## 🧱 Tech Stack
 
-| Step | Action |
+| Layer | Technology |
 | :--- | :--- |
-| 1 | Hospital treats patient for **free** 🆓 |
-| 2 | Hospital generates anonymous case ID (e.g., CARE-2025-0042) |
-| 3 | Hospital uploads: bill + prescription + hospital verification letter (no patient photos) 🧾 |
-| 4 | Hospital adds text description (age, condition, treatment needed — no name or face) |
-| 5 | Donation request goes public 🌐 |
-| 6 | Donor donates based on verifiable documents, not pity photos 💲 |
+| Frontend | HTMX + Pico.css + JS |
+| Backend | Python + Flask + SQLite |
+| Deployment | Anywhere (Render, PythonAnywhere, VPS) |
 
-**Note:** The platform aligns with **Medical privacy (HIPAA, GDPR, local laws)** and won't break any of it's rules
-
-### 🚨 HELP! Medicine in Need
-
-**Patient posts** → Donor contacts → Patient sends pharmacy bill photo → Donor pays patient → Patient buys medicine.
-
-> **No bill? No payment. Fake bill? Police involved. Donor has full legal right.**
+> No build step. No complex tooling. Works on low-end devices.
 
 ---
 
 ## 💻 Run Locally
 
 1. Make sure you have **Python 3.11+** installed
-2. Download that code
-3. Go to project directory and run: `python make.py init && python make.py setup` that will make you a new virtual environment + installs modules used in the project
+2. Download the code
+3. Go to project directory and run:  
+   `python make.py init && python make.py setup`  
+   *This creates a virtual environment + installs all modules*
 4. Then run: `python make.py run`
-5. Open your browser and visit the website locally: `http://localhost:5000/` 
+5. Open your browser and visit: `http://localhost:5000/`
 
-Volia! ⚡
+**Voilà! ⚡**
 
 ---
 
-## 😎 For Developers
+## 📁 Project Structure
 
-You will find everything in `docs/` folder and don't forget to join our [Discord Group](https://discord.gg/cVVq85Nc) and join [GNEC Hackathon Spring 2026](https://gnec-hackathon-2026-spring.devpost.com/) 
+```
+CareBridge/
+├── app/
+│ ├── routes/ # Flask routes
+│ ├── templates/ # HTML + Alpine.js
+│ ├── models.py # SQLite database
+│ └── __init__.py
+├── static/
+│ └── css/ # Pico.css + custom
+├── docs/
+│ └── How-It-Works.md # Detailed scenarios
+├── make.py # CLI helper
+├── requirements.txt
+└── README.md
+```
 
-Enjoy ☺️
+---
+
+## 🤝 Contributing
+
+We're hackathon-mode 🚀 — all help welcome!
+
+See 👉 [Contributing](docs/CONTRIBUTING.md) for more details  
+
+---
+
+## 🌐 Related
+
+- [UNSDG 3 — Good Health & Well-being](https://www.un.org/sustainabledevelopment/health/)
+
+---
+
+## 📄 License
+
+MIT — Build. Help. Ship.
+
+---
+
+**Built with ❤️ for** [GNEC Hackathon 2026 Spring](https://gnec-hackathon-2026-spring.devpost.com/) **— and for everyone who needs healthcare but can't afford it.**
