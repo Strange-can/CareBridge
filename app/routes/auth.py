@@ -28,11 +28,11 @@ def signup_user():
         flash("Account created successfully ✅")
         return redirect(url_for("main.index"))
     
-    return render_template("register.html", form=form)
+    return render_template("signup.html", form=form)
     
     
 @auth_bp.route("/login", methods=['GET', 'POST'])
-def signup_user():
+def login_user():
     form = LoginForm()
     
     if form.validate_on_submit():
