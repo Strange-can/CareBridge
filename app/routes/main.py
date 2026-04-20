@@ -15,3 +15,7 @@ def about():
 @main_bp.route("/register")
 def register():
     return render_template("register.html")
+
+@main_bp.route("/donor-dashboard")
+def donor_dashboard():
+    return render_template("donor_dashboard.html")
