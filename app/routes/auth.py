@@ -2,6 +2,8 @@ from flask import Blueprint, render_template, redirect, url_for, request, flash
 from app.models import db, User
 from app.forms import SignupForm, LoginForm
 from flask_login import login_user
+from flask import request
+from datetime import datetime
 
 auth_bp = Blueprint("auth", __name__)
 
@@ -48,3 +50,39 @@ def login_user():
     
     return render_template("login.html", form=form)
     
+@auth_bp.route("/api/urgent-help", methods=["POST"])
+def urgent_help():
+    try:
+        data = request.get_json()
+
+        # Check JSON
+        if not data:
+            return {
+                "status": "error",
+                "message": "Invalid JSON body"
+            }, 400
+
+        # Required fields
+        required_fields = ["name", "phone", "location", "emergency_type"]
+
+        for field in required_fields:
+            if field not in data or not data[field]:
+                return {
+                    "status": "error",
+                    "message": f"{field} is required"
+                }, 400
+
+        print("🚨 Urgent Help:", data)
+
+        return {
+            "status": "success",
+            "message": "Urgent help request submitted",
+            "timestamp": datetime.utcnow().isoformat(),
+            "data": data
+        }, 200
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e)
+        }, 500
