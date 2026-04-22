@@ -1,16 +1,16 @@
 {% macro Navbar() %}
 <nav class="topnav">
   <ul>
-    <li><strong><a href="/" class="contrast">BridgeCare</a></strong></li>
+    <li><strong><a href="/" class="contrast">BridgeCare <img src="{{ url_for('static', filename='icons/hand-heart.svg') }}"></a></strong></li>
   </ul>
   <ul>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Donate</a></li>
-    <li><a href="#">Hospital Portal</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="/urgent-help">Urgent help <img src="{{ url_for('static', filename='icons/first-aid.svg') }}"></a></li>
+    <li><a href="/requests">Donate <img src="{{ url_for('static', filename='icons/donate.svg') }}"></a></li>
+    <li><a href="/hospital-login">Hospital Portal <img src="{{ url_for('static', filename='icons/hospital.svg') }}"></a></li>
+    <li><a href="/contact">Contact <img src="{{ url_for('static', filename='icons/phone.svg') }}"></a></li>
   </ul>
   <ul>
-    <li><a href="/login" class="contrast">Login</a></li>
+    <li><a href="/login" class="contrast">Login <img src="{{ url_for('static', filename='icons/user.svg') }}"></a></li>
     <li><button class="contrast">Theme</button></li>
   </ul>
 </nav>
