@@ -1,30 +1,39 @@
-{% extends 'base.html' %} {% block css %}
-<link
-  rel="stylesheet"
-  href="{{ url_for('static', filename='css/dashboards/main.css') }}"
-/>
-{% endblock %} {% block content %}
-<main>
-  <h1>Donor Dashboard</h1>
+{% extends 'base.html' %}
 
-  <div class="dashboard-cards">
-    <div class="card">
-      <h3>Your Blood Group</h3>
-      <p>O+</p>
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboards/main.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="dashboard">
+
+  <section class="hero">
+    <h1>💖 Donor Dashboard</h1>
+    <p>Make impact with transparency</p>
+  </section>
+
+  <section class="stats">
+    <div class="card">💰 $500 Donated</div>
+    <div class="card">📄 8 Helped</div>
+    <div class="card">🏥 3 Hospitals</div>
+  </section>
+
+  <section>
+    <h2>Active Requests</h2>
+
+    <div class="request-card">
+      <h3>🏥 Hospital Case</h3>
+      <p>Cost: $100</p>
+      <button>Donate</button>
     </div>
 
-    <div class="card">
-      <h3>Donation Status</h3>
-      <p>Available</p>
+    <div class="request-card urgent">
+      <h3>🚨 Urgent Medicine</h3>
+      <p>Need immediately</p>
+      <button>Contact</button>
     </div>
-  </div>
 
-  <div class="requests">
-    <h2>Urgent Requests</h2>
-    <ul>
-      <li>Karachi - O+ needed</li>
-      <li>Lahore - A- needed</li>
-    </ul>
-  </div>
+  </section>
+
 </main>
 {% endblock %}

@@ -5,25 +5,40 @@
 {% endblock %}
 
 {% block content %}
-<main>
-    <h1>Hospital Dashboard</h1>
+<main class="dashboard">
 
-    <div class="dashboard-cards">
-        <div class="card">
-            <h3>Available Blood Units</h3>
-            <p>200</p>
-        </div>
+  <section class="hero">
+    <h1>🏥 Hospital Dashboard</h1>
+    <p>Create and manage donation requests</p>
+  </section>
 
-        <div class="card">
-            <h3>Pending Requests</h3>
-            <p>12</p>
-        </div>
+  <section class="stats">
+    <div class="card">📄 45 Requests</div>
+    <div class="card">💰 $8K Raised</div>
+    <div class="card">✅ Verified</div>
+  </section>
+
+  <section>
+    <h2>Create Request</h2>
+
+    <form>
+      <input type="text" placeholder="Medicine Name 💊" required>
+      <input type="number" placeholder="Cost 💲" required>
+      <input type="text" placeholder="Quantity" required>
+      <input type="file" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Your Requests</h2>
+
+    <div class="request-card">
+      <p>Antibiotics - $200</p>
+      <span class="status">Pending</span>
     </div>
 
-    <div class="actions">
-        <h2>Actions</h2>
-        <button>Request Blood</button>
-        <button>Update Inventory</button>
-    </div>
+  </section>
+
 </main>
 {% endblock %}
