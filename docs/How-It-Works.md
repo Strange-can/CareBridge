@@ -126,7 +126,7 @@ Then donors see the request, verify, and pay.
 A: **Never.** Only bills with medicine names + cost.
 
 **Q: What if a patient has no bill?**  
-A: Use **"HELP! Medicine in need"** feature (Scenario 2).
+A: Use **"Individual Request"** feature (Scenario 2).
 
 **Q: Is this legal?**  
 A: Yes. No real patient identifiers = no PHI under HIPAA.
