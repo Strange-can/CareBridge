@@ -1,6 +1,6 @@
 # CareBridge 💚
 
-> *Healthcare for everyone — online, offline, or in need*
+> *Healthcare for everyone — regardless of ability to pay*
 
 ![Cover Image](cover.png)
 
@@ -33,18 +33,45 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 | Layer | Technology |
 | :--- | :--- |
-| Frontend | Preact.js + Pico.CSS + Wouter |
+| Frontend | Preact.js + Pico.css + Wouter |
 | Backend | Node.js + Express.js + MongoDB Atlas |
-| Deployment | Netlify + ? |
+| Deployment | Netlify (frontend) + ? (backend) |
 
-> No build step. No complex tooling. Works on low-end devices.
+> Lightweight, fast, and works on low-end devices.
+
+---
+
+## What Changed
+
+| Old | New |
+| :--- | :--- |
+| Python/Flask/SQLite | Node.js/Express/MongoDB Atlas |
+| Vanilla JS + HTMX | Preact.js + Wouter |
+| Single repo structure | Split `frontend/` + `backend/` |
+| `make.py` | `pnpm dev` commands |
+| Removed `requirements.txt` | Added `package.json` references |
+
+Ready to ship 🚀
 
 ---
 
 ## 💻 Run Locally
 
-We use **pnpm** for both the frontend and the backend
+We use **pnpm** for both frontend and backend.
 
+**Frontend:**
+```bash
+cd frontend
+pnpm install
+pnpm dev
+```
+
+**Backend:**
+```bash
+cd backend
+pnpm install
+pnpm dev
+```
 
 **Voilà! ⚡**
 
@@ -52,19 +79,31 @@ We use **pnpm** for both the frontend and the backend
 
 ## 📁 Project Structure
 
-```
+```bash
 CareBridge/
-├── app/
-│ ├── routes/ # Flask routes
-│ ├── templates/ # HTML + Alpine.js
-│ ├── models.py # SQLite database
-│ └── __init__.py
-├── static/
-│ └── css/ # Pico.css + custom
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ ├── index.html
+│ ├── package.json
+│ └── pnpm-lock.yaml
+├── backend/
+│ ├── src/
+│ │ ├── app.js
+│ │ ├── config.js
+│ │ ├── index.js
+│ │ ├── controllers/
+│ │ ├── db/
+│ │ ├── routes/
+│ │ └── utils/
+│ ├── package.json
+│ └── pnpm-lock.yaml
 ├── docs/
-│ └── How-It-Works.md # Detailed scenarios
-├── make.py # CLI helper
-├── requirements.txt
+│ ├── How-It-Works.md
+│ └── CONTRIBUTING.md
 └── README.md
 ```
 
