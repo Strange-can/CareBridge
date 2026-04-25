@@ -1,19 +1,17 @@
 {
-  "name": "frontend",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "CareBridge-frontend",
+  "version": "1.0.0",
+  "description": "Built using 11ty, PicoCSS & HTMX",
+  "main": "",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "pnpm exec eleventy --serve",
+    "build": "pnpm exec eleventy"
   },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.23.0",
   "dependencies": {
-    "preact": "^10.29.1",
-    "wouter": "^3.9.0"
-  },
-  "devDependencies": {
-    "@preact/preset-vite": "^2.10.5",
-    "vite": "^8.0.10"
+    "@11ty/eleventy": "^3.1.5"
   }
 }

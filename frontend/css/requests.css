@@ -4,10 +4,6 @@
   --bd-rad: 0.25rem;
   --hos-logo-size: 48px;
 }
-body {
-  background: red!important;
-}
-
 #cont {
   position: relative;
 }

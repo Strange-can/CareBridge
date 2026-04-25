@@ -1,0 +1,68 @@
+---
+layout: base.njk
+css:
+  - '/css/signup.css'
+---
+<h1>Create a new account</h1>
+
+<section class="form-section">
+  <form method="POST">
+    <label>
+      Full Name
+      <input
+        type="text"
+        name="fullname"
+        placeholder="John Doe"
+        required
+        aria-required="true"
+      />
+    </label>
+    
+    <label>
+      Username
+      <input
+        type="text"
+        name="username"
+        placeholder="user123"
+        required
+        aria-required="true"
+      />
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" placeholder="someone@example.com" required aria-required="true" autocomplete="email" />
+    </label>
+
+    <label>
+      Password
+      <input
+        type="password"
+        name="password"
+        placeholder="*******"
+        required
+        autocomplete="new-password"
+      />
+    </label>
+
+    <label>
+      Confirm Password
+      <input
+        type="password"
+        name="confirm"
+        placeholder="*******"
+        required
+        autocomplete="new-password"
+      />
+    </label>
+
+    <label class="agree-label">
+      <input type="checkbox" name="agree" required aria-required="true" />
+      I have read and I accept <a href="#">Terms and Policies</a>
+    </label>
+
+    <input type="submit" name="submit" value="Create Account" />
+  </form>
+  <a href="/login" class="end-link">Already have an account?</a>
+</section>
+    
