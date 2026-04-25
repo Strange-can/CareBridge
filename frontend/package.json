@@ -1,7 +1,7 @@
 {
-  "name": "learn-11ty",
+  "name": "CareBridge-frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Built using 11ty, PicoCSS & HTMX",
   "main": "",
   "scripts": {
     "dev": "pnpm exec eleventy --serve",
