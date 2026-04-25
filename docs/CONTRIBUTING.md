@@ -4,7 +4,7 @@
 
 * **Frontend:** [11ty](https://www.11ty.dev/), [Pico.css](https://www.picocss.com) & [HTMX](https://www.htmx.org)
 * **Backend:** [FastAPI](https://fastapi.tiangolo.com/) (Python)
-* **Database:** MongoDB Atlas (PyMongo/Motor)
+* **Database:** SQLite
 * **Package Manager:** pnpm (frontend) + pip (backend)
 
 ---
@@ -93,8 +93,7 @@ Always work on a branch. Never code directly on `main`.
 ### 1. Backend & Database
 
 - **FastAPI** handles all dynamic routes and returns HTML fragments
-- **MongoDB Atlas** stores all application data
-- **Motor** (async PyMongo) for database operations
+- **SQLite** stores all application data
 - All endpoints accept `application/x-www-form-urlencoded` (HTMX default)
 - Every endpoint **MUST** returns HTML, not JSON
 
