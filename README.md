@@ -33,7 +33,7 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 | Layer | Technology |
 | :--- | :--- |
-| Frontend | Preact.js + Pico.css + Wouter |
+| Frontend | 11ty + Pico.css + HTMX |
 | Backend | Node.js + Express.js + MongoDB Atlas |
 | Deployment | Netlify (frontend) + ? (backend) |
 
@@ -46,7 +46,7 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 | Old | New |
 | :--- | :--- |
 | Python/Flask/SQLite | Node.js/Express/MongoDB Atlas |
-| Vanilla JS + HTMX | Preact.js + Wouter |
+| Vanilla JS + HTMX | 11ty + HTMX |
 | Single repo structure | Split `frontend/` + `backend/` |
 | `make.py` | `pnpm dev` commands |
 | Removed `requirements.txt` | Added `package.json` references |
@@ -82,14 +82,17 @@ pnpm dev
 ```bash
 CareBridge/
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ ├── index.html
-│ ├── package.json
-│ └── pnpm-lock.yaml
+│   ├── _components/
+│   ├── content/
+│   ├── css/
+│   ├── _data/
+│   ├── fonts/
+│   ├── icons/
+│   ├── _includes/
+│   ├── js/
+│   ├── node_modules/
+│   ├── package.json
+│   └── pnpm-lock.yaml
 ├── backend/
 │ ├── src/
 │ │ ├── app.js
