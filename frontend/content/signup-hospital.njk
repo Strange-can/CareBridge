@@ -15,18 +15,78 @@ css:
         name="name"
         required
         aria-required="true"
+        placeholder="Grace General Hospital"
       />
     </label>
-    <label for="country">
-      Country Name
-      <input
-        type="text"
-        id="country"
-        name="country"
-        required
-        aria-required="true"
-      />
-    </label>
+    <div class="grid">
+      <label>
+        Email
+        <input
+          type="email"
+          name="email"
+          required
+          aria-required="true"
+          placeholder="someone@example.com"
+        />
+      </label>
+      <label>
+        Phone Number (with country code)
+        <input
+          type="tel"
+          name="phone"
+          required
+          aria-required="true"
+          placeholder="+XXX XXX XXX..."
+        />
+      </label>
+    </div>
+    <div class="grid">
+      <label>
+      Password
+        <input
+          type="password"
+          name="password"
+          required
+          aria-required="true"
+          placeholder="******"
+        />
+      </label>
+      <label>
+        Confirm Password
+        <input
+          type="password"
+          name="confrim-password"
+          required
+          aria-required="true"
+          placeholder="******"
+        />
+      </label>
+    </div>
+    
+    <div class="grid">
+      <label for="country">
+        Country Name
+        <input
+          type="text"
+          id="country"
+          name="country"
+          required
+          aria-required="true"
+          placeholder="Nigeria"
+        />
+      </label>
+      <label for="city">
+        City 
+        <input
+          type="text"
+          id="city"
+          name="city"
+          required
+          aria-required="true"
+          placeholder="Abuja"
+        />
+      </label>
+    </div>
     <label>
       Address
       <input
@@ -34,6 +94,7 @@ css:
         name="address"
         required
         aria-required="true"
+        placeholder="123 Maple Street"
       />
     </label>
     <label>
@@ -52,42 +113,7 @@ css:
         name="website-link"
         required
         aria-required="true"
-      />
-    </label>
-    <label>
-      Email
-      <input
-        type="email"
-        name="email"
-        required
-        aria-required="true"
-      />
-    </label>
-    <label>
-      Phone Number (with country code)
-      <input
-        type="text"
-        name="phone"
-        required
-        aria-required="true"
-      />
-    </label>
-    <label>
-      Password
-      <input
-        type="password"
-        name="password"
-        required
-        aria-required="true"
-      />
-    </label>
-    <label>
-      Confirm Password
-      <input
-        type="password"
-        name="confrim-password"
-        required
-        aria-required="true"
+        placeholder="https://www.example.com or https://facebook.com/xxx"
       />
     </label>
     <label>
@@ -97,15 +123,27 @@ css:
         name="num-workers"
         required
         aria-required="true"
+        placeholder="32"
       />
     </label>
     <label>
-      Location link on Google Maps
+      Number of beds 
+      <input
+        type="number"
+        name="beds_count"
+        required
+        aria-required="true"
+        placeholder="49"
+      />
+    </label>
+    <label>
+      Hospital location link on Google Maps
       <input
         type="url"
         name="location-link"
         required
         aria-required="true"
+        placeholder="https://maps.app.goo.gl/xxxxx"
       />
     </label>
     <label>
@@ -154,12 +192,12 @@ css:
       <legend>Please answer questions below.</legend>
       
       <label>
-        Why you want to make an account?
-        <textarea name="q-1"></textarea>
+        Why do you want to make an account?
+        <textarea name="q-1" placeholder="your answer goes here.."></textarea>
       </label>
       <label>
         If someone can't afford the bill/medicine will you treat him for free until he pays or you will refuse politely until he pays?
-        <textarea name="q-2"></textarea>
+        <textarea name="q-2" placeholder="your answer goes here.."></textarea>
       </label>
     </fieldset>
     <fieldset>
