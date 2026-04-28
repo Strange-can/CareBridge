@@ -13,24 +13,10 @@
   padding: 15px 18px;
 }
 
-aside, #right, .arrow-btn {
+#cont aside, #right, .arrow-btn {
   transition: 0.005s ease-in-out;
 }
 
-@media only screen and (min-width: 700px) {
-  #right { margin-left: 40%}
-  aside {
-    position: fixed;
-    top: 15%;
-    transform: translateY(-50deg);
-    left: 15px;
-    width: calc(40% - 32px)!important;
-    
-  }
-}
-@media only screen and (min-width: 1240px) {
-  
-}
 .arrow-btn {
   position: absolute;
   top: 50%;
@@ -40,6 +26,20 @@ aside, #right, .arrow-btn {
 }
 .arrow-btn img {
   width: 2rem;
+}
+
+@media only screen and (min-width: 700px) {
+  #right { margin-left: 40%}
+  #cont aside {
+    position: fixed;
+    top: 15%;
+    transform: translateY(-50deg);
+    left: 15px;
+    width: calc(40% - 32px)!important;
+  }
+}
+@media only screen and (min-width: 1240px) {
+  
 }
 
 #arrow-btn-left {
@@ -55,7 +55,7 @@ aside, #right, .arrow-btn {
 
 #arrow-btn-right img { margin-left: 25%; }
 
-.hide-aside {
+#cont .hide-aside {
   left: -37%;
   border-color: transparent!important;
 }
@@ -103,4 +103,8 @@ section#right article header .inner-1 {
 }
 .hide-arrow {
   display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .arrow-btn { display: none; }
 }
