@@ -1,0 +1,41 @@
+<h2>⏳ Pending Hospitals ({{ pending_hospitals|length }})</h2>
+
+<ul class="container">
+  {% for hospital in pending_hospitals %}
+    <li style="margin-bottom: 1rem;">
+      <strong>{{ hospital.name }}</strong><br>
+      📍 {{ hospital.city }}, {{ hospital.country }}<br>
+      📧 {{ hospital.email }} | 📞 {{ hospital.phone }}<br>
+      <a href="/admin/hospitals/{{ hospital.id }}/review">Review Details →</a>
+      <br>
+      <a href="/admin/hospitals/{{ hospital.id }}/approve" style="color: green;">✅ Approve</a>
+      | 
+      <a href="/admin/hospitals/{{ hospital.id }}/reject" style="color: red;">❌ Reject</a>
+    </li>
+  {% else %}
+    <li>No pending hospitals ✨</li>
+  {% endfor %}
+</ul>
+
+<h2>🚩 Reported Requests</h2>
+
+<ul class="container">
+  {% for request in reported_requests %}
+    <li>
+      <a href="/requests/{{ request.public_id }}">Request #{{ request.public_id }}</a>
+      <strong>| Reported by: {{ request.reported_by }}</strong>
+      <span style="color: red;">⚠️</span>
+    </li>
+  {% else %}
+    <li>No reports — clean platform ✅</li>
+  {% endfor %}
+</ul>
+
+<h2>📊 Platform Stats</h2>
+
+<ul class="container">
+  <li>🏥 Verified Hospitals: {{ stats.verified_hospitals }}</li>
+  <li>💰 Total Donations: ${{ stats.total_donations }}</li>
+  <li>📋 Active Requests: {{ stats.active_requests }}</li>
+  <li>👥 Total Users: {{ stats.total_users }}</li>
+</ul>

@@ -1,7 +1,0 @@
-#NODE_MODULES
-
-node_modules 
-
-#ENV
-.env 
-.env.local

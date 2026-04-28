@@ -1,0 +1,40 @@
+<h2>🏥 Pending Requests</h2>
+
+<ul class="container">
+  {% for request in pending_requests %}
+    <li>
+      <a href="/requests/{{ request.public_id }}">Patient #{{ request.patient_id }}</a>
+      <strong>| ${{ request.total_cost }} - {{ request.created_at }}</strong>
+      <span style="padding: 10px; border: 0.05rem solid #ddd; border-radius: 12%;">{{ request.status }}</span>
+    </li>
+  {% else %}
+    <li>No pending requests ✨</li>
+  {% endfor %}
+</ul>
+
+<h2>✅ Funded Requests</h2>
+
+<ul class="container">
+  {% for request in funded_requests %}
+    <li>
+      <a href="/requests/{{ request.public_id }}">Patient #{{ request.patient_id }}</a>
+      <strong>| ${{ request.total_cost }} - {{ request.created_at }}</strong>
+      <span style="padding: 10px; border: 0.05rem solid #ddd; border-radius: 12%; background: #d4edda;">{{ request.status }}</span>
+    </li>
+  {% else %}
+    <li>No funded requests yet 💚</li>
+  {% endfor %}
+</ul>
+
+<div class="container" style="margin-top: 2rem;">
+  <a href="/requests/new/hospital" role="button">➕ Create New Request</a>
+</div>
+
+<div class="container" style="margin-top: 1rem;">
+  <strong>Verification Status:</strong> 
+  {% if hospital.status == 'verified' %}
+    <span style="color: green;">✅ Verified</span>
+  {% else %}
+    <span style="color: orange;">⏳ Pending review</span>
+  {% endif %}
+</div>

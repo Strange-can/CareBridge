@@ -1,0 +1,43 @@
+<h2>💰 My Donations</h2>
+
+<ul class="container">
+  {% for donate in donates %}
+    <li>
+      <a href="/requests/{{ donate.public_id }}">Request #{{ donate.public_id }}</a>
+      <strong>| ${{ donate.amount }} - {{ donate.date }}</strong>
+      <span style="padding: 10px; border: 0.05rem solid #ddd; border-radius: 12%;">{{ donate.status }}</span>
+    </li>
+  {% else %}
+    <li>You haven't donated yet 💚</li>
+  {% endfor %}
+</ul>
+
+<h2>🏥 Following</h2>
+
+<ul class="container">
+  {% for following in followings %}
+    <li>
+      <a href="/hospitals/{{ following.public_id }}">{{ following.name }}</a>
+    </li>
+  {% else %}
+    <li>You're not following any hospitals yet</li>
+  {% endfor %}
+</ul>
+
+<h2>📋 Latest Requests</h2>
+
+<ul class="container">
+  {% for request in requests %}
+    <li>
+      <a href="/requests/{{ request.public_id }}">Request #{{ request.public_id }}</a>
+      <strong>| ${{ request.total_cost }} - {{ request.facility_name }}</strong>
+      <span style="padding: 10px; border: 0.05rem solid #ddd; border-radius: 12%;">{{ request.status }}</span>
+    </li>
+  {% else %}
+    <li>No active requests at the moment</li>
+  {% endfor %}
+</ul>
+
+<div class="container" style="margin-top: 2rem;">
+  <a href="/requests" role="button">🌐 Browse All Requests</a>
+</div>

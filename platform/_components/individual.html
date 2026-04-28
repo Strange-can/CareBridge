@@ -1,0 +1,17 @@
+<h2>My Requests</h2>
+
+<ul class="container">
+  {% for request in my_requests %}
+    <li>
+      <a href="/requests/{{ request.public_id }}">Request #{{ request.public_id }}</a>
+      <strong>| ${{ request.total_cost }} - {{ request.created_at }}</strong>
+      <span style="padding: 10px; border: 0.05rem solid #ddd; border-radius: 12%;">{{ request.status }}</span>
+    </li>
+  {% else %}
+    <li>You haven't made any requests yet</li>
+  {% endfor %}
+</ul>
+
+<div class="container" style="margin-top: 2rem;">
+  <a href="/requests/new/individual" role="button">Request Medicine</a>
+</div>

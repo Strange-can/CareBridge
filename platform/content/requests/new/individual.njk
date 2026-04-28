@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Medical Request Form</title>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
-
-  <style>
-    :root {
+---
+layout: base.html
+title: Medical Request Form
+style:'
+  :root {
       --primary: #2563eb;
     }
-  </style>
-</head>
-<body>
+'
+---
 
-<main class="container">
-  <h2> Medical Assistance Request</h2>
+<section class="container">
+<h2> Medical Assistance Request</h2>
 
   <form>
     <label>
@@ -68,7 +61,4 @@
 
     <button type="submit">Submit Request</button>
   </form>
-</main>
-
-</body>
-</html>
+</section>
