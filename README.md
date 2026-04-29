@@ -31,11 +31,12 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 ## 🧱 Tech Stack
 
-| Layer | Technology |
-| :--- | :--- |
-| Frontend | 11ty + Pico.css + HTMX |
-| Backend | FastAPI (Python) + SQLite |
-| Deployment | Netlify (frontend) + Render (backend) |
+1. HTML
+2. 11ty
+3. Pico.css
+4. JavaScript
+5. Firebase
+6. Netlify 
 
 > Lightweight, fast, and works on low-end devices.
 
@@ -56,20 +57,12 @@ Ready to ship 🚀
 
 ## 💻 Run Locally
 
-We use **pnpm** for the frontend and **pip** for the backend.
+We use **pnpm**.
 
-**Frontend:**
 ```bash
-cd frontend
+cd platfrom
 pnpm install
 pnpm dev
-```
-
-**Backend:**
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
 ```
 
 **Voilà! ⚡**
@@ -80,7 +73,7 @@ uvicorn main:app --reload
 
 ```bash
 CareBridge/
-├── frontend/
+├── platform/
 │   ├── _components/
 │   ├── content/
 │   ├── css/
@@ -92,10 +85,6 @@ CareBridge/
 │   ├── node_modules/
 │   ├── package.json
 │   └── pnpm-lock.yaml
-├── backend/
-│ ├── main.py
-│ ├── database.db 
-│ └── requirements.txt
 ├── docs/
 │ ├── How-It-Works.md
 │ └── CONTRIBUTING.md
