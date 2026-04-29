@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/pico.blue.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.11/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="/css/globals.css">
     {%- for file in css %}
       <link rel="stylesheet" href="{{ file }}">
@@ -23,8 +22,39 @@
     </main>
     
     <script src="/js/helpers.js"></script>
+    
+    <!-- Firebase Import Map -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+            
+      const firebaseConfig = {
+        apiKey: "{{ firebase.apiKey }}",
+        authDomain: "{{ firebase.authDomain }}",
+        projectId: "{{ firebase.projectId }}",
+        storageBucket: "{{ firebase.storageBucket }}",
+        messagingSenderId: "{{ firebase.messagingSenderId }}",
+        appId: "{{ firebase.appId }}"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      window.db = getFirestore(app);
+      window.auth = getAuth(app);
+      
+      window.getUserData = async (uid) => {
+        const docRef = doc(window.db, "users", uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            return docSnap.data(); // Returns { name, role, email, etc }
+        }
+        return null;
+      };
+    </script>
+
     {%- for script in js %}
-      {{ script | safe }}
+      <script type="module" src="{{ script }}"></script>
     {%- endfor %}
 </body>
 </html>
