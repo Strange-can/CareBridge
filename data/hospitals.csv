@@ -1,3 +1,0 @@
-id,name,email,password_hash,address,is_verified,is_active,created_at
-1,City Hospital,city@gmail.com,hashed123,Karachi,True,True,2025-01-01
-2,General Hospital,general@gmail.com,hashed123,Lahore,False,True,2025-01-02

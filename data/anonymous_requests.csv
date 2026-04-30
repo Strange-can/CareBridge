@@ -1,3 +1,0 @@
-id,name,description,goal_amount,raised_amount,contact_link,contact_link_hash,show_contact,status,urgent,is_deleted,created_at
-1,Unknown,Help needed for surgery,8000.00,2000.00,https://wa.me/123456,hash123,True,active,High,False,2025-01-01
-2,,Emergency case,6000.00,1000.00,,hash456,False,active,High,False,2025-01-02

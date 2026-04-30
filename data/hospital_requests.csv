@@ -1,3 +1,0 @@
-id,hospital_id,title,description,goal_amount,raised_amount,status,is_deleted,created_at
-1,1,Blood Donation Needed,Need urgent blood for surgery,5000.00,1500.00,active,False,2025-01-01
-2,2,Medical Fund,Help for cancer treatment,10000.00,3000.00,active,False,2025-01-02

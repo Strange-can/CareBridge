@@ -15,7 +15,7 @@ A **donation platform** connecting patients in need, verified hospitals, and don
 1. Hospital treats patient for **free** 🆓
 2. Hospital uploads bill (medicine names + cost + hospital stamp) — **no patient photos or names**
 3. Donation request goes public 🌐
-4. Donor pays hospital directly 💲
+4. Donor pays hospitals directly 💲
 5. Patient gets healthy ✅
 
 **No money? No problem. No privacy violation? Guaranteed.**
@@ -44,10 +44,9 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 ## 💻 Run Locally
 
-We use **pnpm**.
+We use **pnpm** package manager.
 
 ```bash
-cd platfrom
 pnpm install
 pnpm dev
 ```
@@ -60,18 +59,18 @@ pnpm dev
 
 ```bash
 CareBridge/
-├── platform/
-│   ├── _components/
-│   ├── content/
-│   ├── css/
-│   ├── _data/
-│   ├── fonts/
-│   ├── icons/
-│   ├── _includes/
-│   ├── js/
-│   ├── node_modules/
-│   ├── package.json
-│   └── pnpm-lock.yaml
+├── _components/
+├── content/
+├── css/
+├── _data/
+├── fonts/
+├── icons/
+├── _includes/
+├── js/
+├── node_modules/
+├── _site/
+├── package.json
+├── pnpm-lock.yaml
 ├── docs/
 │ ├── How-It-Works.md
 │ └── CONTRIBUTING.md

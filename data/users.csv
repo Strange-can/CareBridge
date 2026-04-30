@@ -1,4 +1,0 @@
-id,username,email,password_hash,role,is_active,created_at
-1,yamin,yamin@gmail.com,hashed123,donor,True,2025-01-01
-2,ali,ali@gmail.com,hashed123,donor,True,2025-01-02
-3,admin,admin@gmail.com,hashed123,admin,True,2025-01-03
