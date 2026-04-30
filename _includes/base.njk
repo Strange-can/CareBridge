@@ -26,7 +26,7 @@
     <!-- Firebase Import Map -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-      import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+      import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
       import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
             
       const firebaseConfig = {
@@ -51,7 +51,34 @@
         }
         return null;
       };
+      
+      window.payNow = async (requestId) => {
+            // 1. Show a fake loading state
+            const btn = event.target;
+            btn.ariaBusy = "true";
+            btn.textContent = "Processing Payment...";
+
+            // 2. Simulate 2-second bank delay ⏳
+            setTimeout(async () => {
+                try {
+                    // 3. Update Firestore status to 'funded'
+                    const requestRef = doc(window.db, "requests", requestId);
+                    await updateDoc(requestRef, {
+                        status: 'funded',
+                        fundedBy: window.auth.currentUser.uid
+                    });
+
+                    // 4. Success Message
+                    alert("Payment Successful! You just saved a life. ❤️😇");
+                    location.reload(); 
+                } catch (err) {
+                    alert("Payment failed: " + err.message);
+                    btn.ariaBusy = "false";
+                }
+            }, 2000);
+        };
     </script>
+    <script type="module" src="/js/nav-and-sidebars.js"></script>
 
     {%- for script in js %}
       <script type="module" src="{{ script }}"></script>

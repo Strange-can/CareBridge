@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+
+<a href="/dashboard" role="button" class="outline secondary" style="margin-bottom: 2rem;">
+  Back to Dashboard
+</a>
+
+<form id="hospRequestForm">
+  <input type="text" id="patientId" placeholder="Anonymous Patient ID (e.g. P-102)" required>
+  <input type="text" id="medName" placeholder="Medicine 1, Medicine 2.." required>
+  <input type="number" id="cost" placeholder="Total Cost ($)" required>
+  <label>Upload Bill (Blur names!) <input type="file" id="billImg"></label>
+  <button type="submit">Post Request</button>
+</form>

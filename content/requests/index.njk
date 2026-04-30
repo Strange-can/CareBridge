@@ -2,6 +2,8 @@
 layout: base.njk
 css:
   - '/css/requests.css'
+js:
+  - '/js/requests/index.js'
 ---
 <section id="cont" class="container-fluid">
   <aside class="container" id="cont-aside">
@@ -57,20 +59,8 @@ css:
         <div role="button" class="outline secondary">Hospital</div>
       </header>
       
-      <span>Medicines:</span>
-      
-      <ul>
-        <li>bla bla - Quantity = 2</li>
-        <li>bla bla 2 - Quantity = 5</li>
-      </ul>
-      
-      <span>Costs:</span>
-      <ul>
-        <li>Bill Cost = $80</li>
-        <li>Medicine Cost = $70</li>
-      </ul>
-      
-      <p>Patient ID: 457878964421</p>
+      <p>Medicines: <b>Bla 1, Bla 2</b></p>
+      <p>Patient ID: P-389</p>
       <p>Request Date: Thu Apr 30 2026 12:55:56 GMT+0300</p>
       
       <div class="tags">
@@ -79,26 +69,22 @@ css:
       </div>
       
       <footer class="grid">
-        <a role="button" style="font-weight: bold;" href="/requests">DONATE <img src='/icons/tip-jar.svg' /></a>
-        <a role="button" style="font-weight: bold;" class="secondary" href="/requests/contact">CONTACT <img src='/icons/chat-centered-dots.svg' /></a>
+        <button role="button" style="font-weight: bold;">DONATE <img src='/icons/tip-jar.svg' /></button>
+        <button role="button" style="font-weight: bold;" class="secondary">CONTACT <img src='/icons/paper-plane-tilt.svg' /></button>
       </footer>
     </article>
     
     <article>
       <header>
         <div class="inner-1">
-          [INDIVIDUAL_RANDOM__ANYNOMOUS_ID_GOES_HERE]
+          Sick person in need <img src='/icons/first-aid.svg' />
         </div>
         
         <div role="button" class="outline secondary">Individual</div>
       </header>
       
-      <span>Medicines:</span>
+      <p>Medicines: <b>Bla 1</b></p>
       
-      <ul>
-        <li>bla bla - Quantity = 7</li>
-        <li>bla bla 2 - Quantity = 4</li>
-      </ul>
       
       <div class="tags">
         <span class="priority" style="background-color: #E63946;">Life</span>
@@ -106,8 +92,8 @@ css:
       </div>
       
       <footer class="grid">
-        <a role="button" style="font-weight: bold;" href="/requests">DONATE <img src='/icons/tip-jar.svg' /></a>
-        <a role="button" style="font-weight: bold;" class="secondary" href="/requests/contact">TELEGRAM <img src='/icons/telegram-logo.svg' /></a>
+        <button role="button" style="font-weight: bold;">DONATE <img src='/icons/tip-jar.svg' /></button>
+        <button style="font-weight: bold;" class="secondary">CONTACT <img src='/icons/paper-plane-tilt.svg' /></button>
       </footer>
     </article>
   </section>
