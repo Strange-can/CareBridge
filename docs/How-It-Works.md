@@ -107,17 +107,6 @@ Then donors see the request, verify, and pay.
 4. Hospital gets **verified badge** ✅
 5. Donors trust verified hospitals 
 
---- 
-
-## 🔔 What About Notification System?
-
-1. Donor X follows hospital Y 
-2. Hospital Y requested a new donation 
-3. Donor X gets a notification in `/notifications` 
-4. Donor X donates to the hospital 😊
-
-**Note:** for donors' privacy, No one can see the profile's donor or info except his name, country and donated money are seen by the hospital only.
-
 ---
 
 ## ❓ FAQ
@@ -133,5 +122,3 @@ A: Yes. No real patient identifiers = no PHI under HIPAA.
 
 **Q: Who verifies requests?**  
 A: **Donors do.** Platform connects. Donor decides.
-
-**Note:** `/legal` page for legal info ⚖️
