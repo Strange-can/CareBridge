@@ -64,3 +64,63 @@ a img {
   .hide-on-phone { display: none; }
   #menu-btn-navbar { display: block; }
 }
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  color: currentColor;  /* Uses text color */
+  stroke: none;
+}
+
+/* Light mode (default) */
+.first-aid-icon {
+  color: #0891B2;
+}
+
+.donate-icon {
+  color: #E11D48;
+}
+
+.hospital-icon {
+  color: #0F766E;
+}
+
+.envelope-icon {
+  color: #2563EB;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .first-aid-icon {
+    color: #22D3EE;
+  }
+
+  .donate-icon {
+    color: #FB7185;
+  }
+
+  .hospital-icon {
+    color: #14B8A6;
+  }
+
+  .envelope-icon {
+    color: #60A5FA;
+  }
+}
+
+[data-theme="dark"] .first-aid-icon {
+  color: #22D3EE;
+}
+
+[data-theme="dark"] .donate-icon {
+  color: #FB7185;
+}
+
+[data-theme="dark"] .hospital-icon {
+  color: #14B8A6;
+}
+
+[data-theme="dark"] .envelope-icon {
+  color: #60A5FA;
+}
