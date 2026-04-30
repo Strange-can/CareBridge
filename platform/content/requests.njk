@@ -5,12 +5,7 @@ css:
 ---
 <section id="cont" class="container-fluid">
   <aside class="container" id="cont-aside">
-    <form role="search">
-      <input name="search" type="search" placeholder="Search for hospital.." />
-      <input type="submit" value="Search" />
-    </form>
-    
-    
+        
     <button class="arrow-btn" id="arrow-btn-left" onclick="
         addClass('#cont-aside', 'hide-aside');
         addClass('#right', 'full-section');
@@ -25,7 +20,7 @@ css:
     </button>
     
     <form>
-      <h2>Filter Requests</h2>
+      <h2 style="padding-top: 11px;">Filter Requests</h2>
       <hr />
       <div class="grid">
         <select name="type" aria-label="type" required>
@@ -59,14 +54,28 @@ css:
           <span>North Hospital LTD.</span>
         </div>
         
-        <div role="link" class="trust">Trusted <img src='/icons/shield-check.svg' /></div>
+        <div role="button" class="outline secondary">Hospital</div>
       </header>
       
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris vol..</p>
+      <span>Medicines:</span>
+      
+      <ul>
+        <li>bla bla - Quantity = 2</li>
+        <li>bla bla 2 - Quantity = 5</li>
+      </ul>
+      
+      <span>Costs:</span>
+      <ul>
+        <li>Bill Cost = $80</li>
+        <li>Medicine Cost = $70</li>
+      </ul>
+      
+      <p>Patient ID: 457878964421</p>
+      <p>Request Date: Thu Apr 30 2026 12:55:56 GMT+0300</p>
       
       <div class="tags">
-        <span class="priority">VERY HIGH</span>
-        <span class="donation-amount">$0 of $50k needed</span>
+        <span class="priority" style="background-color: darkblue;">Normal</span>
+        <span class="donation-amount">$150</span>
       </div>
       
       <footer class="grid">
@@ -78,23 +87,27 @@ css:
     <article>
       <header>
         <div class="inner-1">
-          <div class="hospital-logo"></div>
-          <span>North Hospital LTD.</span>
+          [INDIVIDUAL_RANDOM__ANYNOMOUS_ID_GOES_HERE]
         </div>
         
-        <div role="link" class="trust">Trusted <img src='/icons/shield-check.svg' /></div>
+        <div role="button" class="outline secondary">Individual</div>
       </header>
       
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris vol..</p>
+      <span>Medicines:</span>
+      
+      <ul>
+        <li>bla bla - Quantity = 7</li>
+        <li>bla bla 2 - Quantity = 4</li>
+      </ul>
       
       <div class="tags">
-        <span class="priority">VERY HIGH</span>
-        <span class="donation-amount">$0 of $50k needed</span>
+        <span class="priority" style="background-color: #E63946;">Life</span>
+        <span class="donation-amount">$120</span>
       </div>
       
       <footer class="grid">
         <a role="button" style="font-weight: bold;" href="/requests">DONATE <img src='/icons/tip-jar.svg' /></a>
-        <a role="button" style="font-weight: bold;" class="secondary" href="/requests/contact">CONTACT <img src='/icons/shield-check.svg' /></a>
+        <a role="button" style="font-weight: bold;" class="secondary" href="/requests/contact">TELEGRAM <img src='/icons/telegram-logo.svg' /></a>
       </footer>
     </article>
   </section>

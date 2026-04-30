@@ -14,7 +14,7 @@
 }
 
 #cont aside, #right, .arrow-btn {
-  transition: 0.005s ease-in-out;
+  transition: 0.025s linear;
 }
 
 .arrow-btn {
@@ -37,9 +37,6 @@
     left: 15px;
     width: calc(40% - 32px)!important;
   }
-}
-@media only screen and (min-width: 1240px) {
-  
 }
 
 #arrow-btn-left {
@@ -89,7 +86,6 @@ section#right article header .inner-1 {
   border: 0.05rem solid var(--pico-form-element-border-color);
 }
 .priority {
-  background-color: #E63946;
   color: white;
   padding: 5px 6px;
   font-weight: bold;
