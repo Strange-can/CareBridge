@@ -42,19 +42,6 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 ---
 
-## What Changed
-
-| Old | New |
-| :--- | :--- |
-| Flask | FastAPI |
-| Preact/Vanilla HTML | 11ty |
-| Single repo structure | Split `frontend/` + `backend/` |
-| `make.py` | `pnpm dev` commands |
-
-Ready to ship 🚀
-
----
-
 ## 💻 Run Locally
 
 We use **pnpm**.
