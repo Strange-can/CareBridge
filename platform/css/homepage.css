@@ -1,111 +1,140 @@
-body {
-    margin: 0;
-}
+main { padding: 0!important }
 
-div.hero {
-    background-image: url("images/cropped-main-hero-pic.jpg");
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-size: cover;
-    background-position: center;
+/* Container & Background */
+.cb-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                url("images/cropped-main-hero-pic.jpg") center/cover no-repeat local;
     width: 100%;
-    height: 60vw;
-    padding-top: 1px;
-
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 40%;
+    justify-content: space-between;
+    padding: 60px 5%;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-div.top-section {
+/* Header Section */
+.cb-top-section {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-div.logo {
-    margin-top: 15px;
-    margin-left: 5px;
-    width: 300px;
-    height: 150px;
+.cb-logo-circle {
     background-color: #2E8B57;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-p.brand {
+.cb-brand {
     margin: 0;
-    font-size: 48px;
+    font-size: 40px;
+    font-weight: bold;
     color: white;
 }
 
-p.motto {
+.cb-motto {
     margin: 0;
+    font-size: 14px;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Message & Quote Area */
+.cb-message-box {
+    max-width: 550px;
+    text-align: right;
+    color: white;
+}
+
+.cb-commitment {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.cb-highlight { font-weight: bold; color: #fff; }
+.cb-underline { text-decoration: underline; font-weight: bold; }
+
+.cb-quote {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-right: 4px solid #2E8B57;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px 0 0 8px;
+    font-style: italic;
     font-size: 18px;
     color: white;
-
-    text-align: center;
 }
 
-div.message {
-    margin-top: 70px;
-    padding-left: 10px;
+.cb-quote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: normal;
+    opacity: 0.8;
+}
+
+/* Buttons Area */
+.cb-button-group {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-p.commitment {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding-left: 10px;
-    padding-right: 5px;
-    margin: 0;
-    color: #E0E0E0;
-    font-size: 24px;
-}
-
-p.quote {
-    margin-right: 2%;
-    border: 4px solid black;
-    border-radius: 20px;
-    padding: 5px;
-    width: 51%;
-
-    font-size: 20px;
-}
-
-div.buttons {
-    width: 100%;
-    display: flex;
-    column-gap: 15%;
     justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
 }
 
-button {
-    width: 170px;
-    height: 60px;
-    border-radius: 20px;
+.cb-btn {
+    text-decoration: none;
+    color: white;
+    width: 240px;
+    padding: 15px;
+    border-radius: 12px;
     border: none;
     color: white;
-    transition: transform 0.2s ease-in-out;
-}
-
-button:hover {
-    transform: scale(1.1);
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-button.hospital {
-    background-color: #24A0ED;
+.cb-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-button.donor {
-    background-color: #28A745;
+.cb-btn-sub {
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.9;
+    margin-top: 4px;
 }
 
-button.patient {
-    background-color: #FF991C;
+.cb-btn-hospital { background-color: #24A0ED; }
+.cb-btn-donor    { background-color: #28A745; }
+.cb-btn-patient  { background-color: #FF991C; }
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+    .cb-top-section { flex-direction: column; align-items: center; }
+    .cb-message-box { text-align: center; }
+    .cb-quote { border-right: none; border-bottom: 4px solid #2E8B57; border-radius: 8px; }
+    .cb-button-group { margin-top: 20px; }
 }

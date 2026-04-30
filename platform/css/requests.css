@@ -24,8 +24,12 @@
   background: transparent;
   border: 0;
 }
-.arrow-btn img {
+.arrow-btn svg {
   width: 2rem;
+  height: 2rem;
+  fill: none;
+  color: dodgerblue;  /* Uses text color */
+  stroke: none;
 }
 
 @media only screen and (min-width: 700px) {
@@ -103,4 +107,8 @@ section#right article header .inner-1 {
 
 @media only screen and (max-width: 700px) {
   .arrow-btn { display: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  #arrow-btn-right, #arrow-btn-left { background: #333 }
 }

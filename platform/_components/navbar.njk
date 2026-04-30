@@ -4,9 +4,34 @@
   </ul>
   
   <ul class="hide-on-phone">
-    {% for link in navigation %}
-      <li><a href="{{ link.url }}">{{ link.name }} <img src="/icons/{{ link.iconName }}.svg" class="nav-icon {{iconName}}-icon" /></a></li>
-    {% endfor %}
+
+      <li>
+        <a href="/login">Need help
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="nav-icon first-aid-icon">
+          <rect fill="none"/><path d="M96,160H40a8,8,0,0,1-8-8V104a8,8,0,0,1,8-8H96V40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8V96h56a8,8,0,0,1,8,8v48a8,8,0,0,1-8,8H160v56a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V160Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+          </svg>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/requests">Donate
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon donate-icon" viewBox="0 0 256 256"><rect fill="none"/><circle cx="204" cy="84" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M48,208H16a8,8,0,0,1-8-8V160a8,8,0,0,1,8-8H48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M112,160h32l67-15.41a16.61,16.61,0,0,1,21,16h0a16.59,16.59,0,0,1-9.18,14.85L184,192l-64,16H48V152l25-25a24,24,0,0,1,17-7H140a20,20,0,0,1,20,20h0a20,20,0,0,1-20,20Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M176,85.29A28,28,0,1,1,192,58.71" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/login-hospital">Hospital Portal
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="nav-icon hospital-icon"><rect fill="none"/><line x1="32" y1="216" x2="248" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M48,216V48a8,8,0,0,1,8-8h96a8,8,0,0,1,8,8V216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M160,120h64a8,8,0,0,1,8,8v88" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="104" y1="72" x2="104" y2="120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="80" y1="96" x2="128" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="128 216 128 160 80 160 80 216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/email-us">Email us
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"  class="nav-icon envelope-icon"><rect  fill="none"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="110.55" y1="128" x2="34.47" y2="197.74" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="221.53" y1="197.74" x2="145.45" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+        </a>
+      </li>
+      
+
   </ul>
   
   <ul>
@@ -14,11 +39,13 @@
       <a role="button" href="/login" id="nav-login-btn">Login <img src='/icons/user.svg' /></a>
     </li>
     <li class="hide-on-phone">
-      <a role="button" class="contrast" target="_blank" href="https://www.github.com/omar-hossam/CareBridge">
+      <a role="button" class="contrast outline" target="_blank" href="https://www.github.com/omar-hossam/CareBridge">
       <img src='/icons/github-logo.svg' /></a>
     </li>
     <li id="menu-btn-navbar">
-      <button onclick="addClass('#side-nav', 'active')" class="secondary outline"><img src="/icons/list.svg" /></button>
+      <button onclick="addClass('#side-nav', 'active')" class="secondary outline">
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; color: var(--pico-color)!important" viewBox="0 0 256 256"><rect  fill="none"/><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+      </button>
     </li>
   </ul>
   
