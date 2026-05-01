@@ -56,6 +56,8 @@ a img {
   background: transparent;
   border: 0;
 }
+#side-nav-close svg { color: #000 }
+
 #menu-btn-navbar { display: none; }
 
 @media only screen and (max-width: 1014px) {
@@ -89,6 +91,10 @@ a img {
   color: #5E5B8B;
 }
 
+#home-impact-section {
+  background-color: var(--pico-contrast-background);
+}
+
 /* Dark mode - Pico dark theme */
 @media (prefers-color-scheme: dark) {
   .first-aid-icon {
@@ -110,8 +116,11 @@ a img {
   .topnav {
     background: #223;
   }
-}
-
-@media (prefers-color-scheme: dark) {
+  
+  #side-nav-close svg { color: #fff }
   #side-nav { background: #222233fe }
+
+  #home-impact-section {
+    background-color: #1F3C88;
+  }
 }

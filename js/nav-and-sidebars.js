@@ -3,7 +3,7 @@ import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/
 const authNav = document.getElementById('auth-ui-nav');
 const authSide = document.getElementById('auth-ui-side');
 
-onAuthStateChanged(window.auth, (user) => {
+onAuthStateChanged(window.auth, async (user) => {
   if (user) {
     const userData = await window.getUserData(user.uid);
     const role = userData?.role; // 'donor', 'hospital', or 'individual'
@@ -40,10 +40,10 @@ onAuthStateChanged(window.auth, (user) => {
       localStorage.clear();
       window.location.href = "/";
     };
-
-    document.getElementById('logout-btn').addEventListener('click', handleLogout);
-    document.getElementById('logout-btn-side').addEventListener('click', handleLogout);
-
+    try {
+        document.getElementById('logout-btn').addEventListener('click', handleLogout);
+        document.getElementById('logout-btn-side').addEventListener('click', handleLogout);
+    } catch (e) {}
   } else {
     // Reset to Login button if logged out
     const loginHTML = `<a role="button" href="/login">Login <img src='/icons/user.svg' /></a>`;
